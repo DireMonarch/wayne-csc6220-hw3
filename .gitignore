@@ -1,4 +1,8 @@
+# Project specifics
 jim-haslett-csc6220-hw3
+result.txt
+output.txt
+*.zip
 
 # Prerequisites
 *.d
