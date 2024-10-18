@@ -21,26 +21,6 @@
 /* Forward declare thread function */
 void *compute_rows(void *);
 
-
-void print_matrix(int matrix[MATRIX_SIZE * MATRIX_SIZE]) {
-    /**
-     * Prints matrix passed to it to the screen.
-     *
-     * Function must interperet rows and columns, as matricies are stored as
-     * flat arrays.
-     *
-     * @param matrix integer array representing a 2D matrix of size MATRIX_SIZE
-     *                  x MATRIX_SIZE
-     */
-
-    for (int j=0; j < MATRIX_SIZE; j++) {
-        for (int i=0; i < MATRIX_SIZE; i++) {
-            printf("%3d ", matrix[j*MATRIX_SIZE + i]);
-        }
-        printf("\n");
-    }
-}
-
 /* Declare matricies */
 int matrix_a_[MATRIX_SIZE * MATRIX_SIZE];
 int matrix_b_[MATRIX_SIZE * MATRIX_SIZE];
@@ -53,6 +33,7 @@ int reporting_thread_number_;
 /* Declare mutexes */
 pthread_mutex_t mutex_write_result_lock_;
 pthread_cond_t cond_output_write_;
+
 
 void main() {
     /**
